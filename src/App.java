@@ -1,32 +1,14 @@
-//import java.util.Scanner;
+import java.util.Scanner;
 
-import java.io.FileWriter;
-import java.io.IOException;
-
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
+import carro.Carro;
+import carro.Compacto;
 
 public class App {
-	@SuppressWarnings("unchecked")
-	public static void main(String[] args) throws IOException {
-		JSONObject obj = new JSONObject();
-		obj.put("Nome", "Victor");
-		obj.put("Autor", "Miguez");
+	public static void main(String[] args) {
+		Carro uno = new Compacto("Uno", "Fiat", "Trabalho", "Flex", false);
 		
-		JSONArray company = new JSONArray();
-		company.add("Company: eBay");
+		System.out.println(uno);
 		
-		obj.put("Company List", company);
-		
-		System.out.println(obj);
-		
-		FileWriter file = new FileWriter("db.json");
-		
-		try {
-			file.write(obj.toJSONString());
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		
+
 	}
 }

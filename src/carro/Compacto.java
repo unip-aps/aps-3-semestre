@@ -5,8 +5,8 @@ public class Compacto extends Carro {
 	
 	public Compacto(){};
 	
-	public Compacto(String modelo, String segmento, String fabricante, String categoria, double preco){
-		super(modelo, segmento, fabricante, categoria, preco);
+	public Compacto(String modelo, String fabricante, String categoria, String combustivel, boolean hibrido){
+		super(modelo, fabricante, categoria, combustivel, hibrido);
 	}
 
 }

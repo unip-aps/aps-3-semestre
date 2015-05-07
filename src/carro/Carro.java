@@ -1,19 +1,20 @@
 package carro;
-//import java.util.ArrayList;
 
 public abstract class Carro {
 	String modelo;
 	String fabricante;
 	String categoria;
-	double preco;
+	String combustivel;
+	boolean hibrido;
 	
 	public Carro(){};
 	
-	public Carro(String modelo, String segmento, String fabricante, String categoria, double preco){
-		this.modelo     = modelo;
-		this.fabricante = fabricante;
-		this.categoria  = categoria;
-		this.preco      = preco;
+	public Carro(String modelo, String fabricante, String categoria, String combustivel, boolean hibrido){
+		this.modelo       = modelo;
+		this.fabricante   = fabricante;
+		this.categoria    = categoria;
+		this.combustivel  = combustivel;
+		this.hibrido      = hibrido;
 	}
 	
 }

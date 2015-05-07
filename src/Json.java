@@ -1,12 +1,18 @@
-//import java.util.Scanner;
-
 import java.io.FileWriter;
 import java.io.IOException;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
+import carro.Carro;
+import carro.Compacto;
+import carro.PickUp;
+import carro.Sedan;
+import carro.Suv;
+
 public class Json {
+	
+	Carro uno   = new Compacto("Uno", "Fiat", "Trabalho", "Flex", false);
 	
 	public Json(){};
 	
