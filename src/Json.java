@@ -1,5 +1,7 @@
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.regex.*;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -11,32 +13,42 @@ import carro.Sedan;
 import carro.Suv;
 
 public class Json {
-	
+
+	public ArrayList <Carro> listaDeCarros = new ArrayList<Carro>();
+		
 	Carro uno   = new Compacto("Uno", "Fiat", "Trabalho", "Flex", false);
+	Carro gol   = new Compacto("Gol", "Volkswagen", "CASAIS","Flex", false);
+	Carro agile = new Compacto("Agile", "Chevrolet", "Jovens", "Flex", false);
+
 	
-	public Json(){};
+	public void montarArray() {
+		listaDeCarros.add(uno);
+		listaDeCarros.add(gol);
+		listaDeCarros.add(agile);
+	}
 	
 	public void escreverJson() throws IOException {
-	
+		
+		ArrayList <JSONObject> listaJson = new ArrayList<JSONObject>();
+		
+		montarArray();
+			
 		JSONObject obj = new JSONObject();
 		
-		obj.put("Nome", "Victor");
-		
-		obj.put("Autor", "Miguez");
-		
-		JSONArray company = new JSONArray();
-		company.add("Company: eBay");
-		
-		obj.put("Company List", company);
+		obj.put("modelo", listaDeCarros.get(1).modelo);
 		
 		System.out.println(obj);
 		
 		FileWriter file = new FileWriter("db.json");
 		
 		try {
+			System.out.println("s");
 			file.write(obj.toJSONString());
 		} catch (IOException e) {
 			e.printStackTrace();
-		}
+		} finally {
+            file.flush();
+            file.close();
+        }
 	}
 }

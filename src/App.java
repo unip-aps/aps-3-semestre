@@ -1,14 +1,13 @@
-import java.util.Scanner;
-
-import carro.Carro;
-import carro.Compacto;
+import java.io.IOException;
+import java.util.regex.*;
 
 public class App {
-	public static void main(String[] args) {
-		Carro uno = new Compacto("Uno", "Fiat", "Trabalho", "Flex", false);
+	public static void main(String[] args) throws IOException {
+		//Indicacao indi = new Indicacao();
+		//indi.indicacao();
 		
-		System.out.println(uno);
+		Json obj = new Json();
+		obj.escreverJson();
 		
-
 	}
 }

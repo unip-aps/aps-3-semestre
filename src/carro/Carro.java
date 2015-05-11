@@ -1,11 +1,11 @@
 package carro;
 
 public abstract class Carro {
-	String modelo;
-	String fabricante;
-	String categoria;
-	String combustivel;
-	boolean hibrido;
+	public String modelo;
+	public String fabricante;
+	public String categoria;
+	public String combustivel;
+	public boolean hibrido;
 	
 	public Carro(){};
 	

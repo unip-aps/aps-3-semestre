@@ -18,7 +18,7 @@ public class Menu{
 	    		break;
 	    		
 	    	default:		
-	    		System.out.print("Oops ! Op��o invalida");
+	    		System.out.print("Oops ! Opção invalida");
 	
 		}
 	}

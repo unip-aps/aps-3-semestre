@@ -5,8 +5,8 @@ public class Suv extends Carro {
 	
 	public Suv(){};
 	
-	public Suv(String modelo, String segmento, String fabricante, String categoria, double preco){
-		super(modelo, segmento, fabricante, categoria, preco);
+	public Suv(String modelo, String fabricante, String categoria, String combustivel, boolean hibrido){
+		super(modelo, fabricante, categoria, combustivel, hibrido);
 	}
 
 }
