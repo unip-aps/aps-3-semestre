@@ -32,6 +32,7 @@ public class Indicacao {
 	public void indicacao(){
 		String primeiraPergunta, segundaPergunta, terceiraPergunta;
 
+<<<<<<< HEAD
 		primeiraPergunta = "Qual será o uso do veículo?\n"
 				+ "1- Família\n"
 				+ "2- Trabalho\n"
