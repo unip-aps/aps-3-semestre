@@ -5,8 +5,7 @@ public class Sedan extends Carro {
 	
 	public Sedan(){};
 	
-	public Sedan(String modelo, String segmento, String fabricante, String categoria, double preco){
-		super(modelo, segmento, fabricante, categoria, preco);
+	public Sedan(String modelo, String fabricante, String categoria, String combustivel, boolean hibrido){
+		super(modelo, fabricante, categoria, combustivel, hibrido);
 	}
-
 }

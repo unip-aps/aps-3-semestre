@@ -1,7 +1,7 @@
 public class Menu{
 	
 	Consumo obj = new Consumo();
-	
+		
 	public void menu(int op) {
 	
 		switch (op){
@@ -10,7 +10,7 @@ public class Menu{
 	    		break;
 	    		
 	    	case 2:
-	    		obj.menuConsumo();
+	    		obj.MenuConsumo();
 	    		break;
 	    		
 	    	case 3:
@@ -18,7 +18,7 @@ public class Menu{
 	    		break;
 	    		
 	    	default:		
-	    		System.out.print("Oops ! Op��o invalida");
+	    		System.out.print("Oops ! Opção invalida");
 	
 		}
 	}
