@@ -20,35 +20,30 @@ public class Json {
 	Carro gol   = new Compacto("Gol", "Volkswagen", "CASAIS","Flex", false);
 	Carro agile = new Compacto("Agile", "Chevrolet", "Jovens", "Flex", false);
 
-	
-	public void montarArray() {
+	public void montarListaDeCarros() {
 		listaDeCarros.add(uno);
 		listaDeCarros.add(gol);
 		listaDeCarros.add(agile);
 	}
-	
-	public void escreverJson() throws IOException {
-		
-		ArrayList <JSONObject> listaJson = new ArrayList<JSONObject>();
-		
-		montarArray();
+
+	// public void escreverJson() throws IOException {
 			
-		JSONObject obj = new JSONObject();
+	// 	JSONObject obj = new JSONObject();
 		
-		obj.put("modelo", listaDeCarros.get(1).modelo);
+	// 	obj.put("modelo", listaDeCarros.get(0).modelo);
+	// 	obj.put("modelo", listaDeCarros.get(1).modelo);
 		
-		System.out.println(obj);
+	// 	System.out.println(obj);
 		
-		FileWriter file = new FileWriter("db.json");
+	// 	FileWriter file = new FileWriter("db.json");
 		
-		try {
-			System.out.println("s");
-			file.write(obj.toJSONString());
-		} catch (IOException e) {
-			e.printStackTrace();
-		} finally {
-            file.flush();
-            file.close();
-        }
-	}
+	// 	try {
+	// 		file.write(obj.toJSONString());
+	// 	} catch (IOException e) {
+	// 		e.printStackTrace();
+	// 	} finally {
+ //            file.flush();
+ //            file.close();
+ //        }
+	// }
 }

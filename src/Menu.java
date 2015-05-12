@@ -1,6 +1,7 @@
 public class Menu{
 	
-	Consumo obj = new Consumo();
+	Indicacao opIndicacao = new Indicacao();
+	Consumo opConsumo     = new Consumo();
 		
 	public void menu(int op) {
 	
@@ -10,7 +11,7 @@ public class Menu{
 	    		break;
 	    		
 	    	case 2:
-	    		obj.MenuConsumo();
+	    		opConsumo.MenuConsumo();
 	    		break;
 	    		
 	    	case 3:
