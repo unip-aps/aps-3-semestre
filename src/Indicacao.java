@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Indicacao {
 	int primeiraResposta, segundaResposta, terceiraResposta;
@@ -29,7 +30,7 @@ public class Indicacao {
 		this.terceiraResposta = terceiraResposta;
 	}
 	
-	public void indicacao(){
+	public void menuIndicacao() {
 		String primeiraPergunta, segundaPergunta, terceiraPergunta;
 
 		primeiraPergunta = "Qual será o uso do veículo?\n"
@@ -91,5 +92,24 @@ public class Indicacao {
 			default:
 				System.out.println("Errrrrooouuu!");
 		}
+	}
+
+	public void indicacao() {
+		Json obj = new Json();
+		obj.montarListaDeCarros();
+		int tamanhoListaDeCarros = obj.listaDeCarros.size();
+
+		String segmento = "class carro.Compacto";
+
+		ArrayList <String> carrosIndicados = new ArrayList<String>();
+
+		for (int i = 0; i <= tamanhoListaDeCarros - 1; i++) {
+			if(obj.listaDeCarros.get(i).getClass() == obj.listaDeCarros.get(0).getClass()) {
+				System.out.println(i);
+				carrosIndicados.add(obj.listaDeCarros.get(i).modelo);
+			}
+		}
+
+		System.out.println(carrosIndicados);
 	}
 }

@@ -6,10 +6,6 @@ import java.util.Scanner;
 public class Main {
 	public static void main(String[] args) throws IOException{
 
-		Json obj = new Json();
-		obj.montarListaDeCarros();
-		System.out.println(obj.listaDeCarros);
-
 		Scanner ler = new Scanner(System.in);
 		Console console = new Console();
 
