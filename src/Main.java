@@ -1,9 +1,9 @@
 import java.io.IOException;
-import java.util.regex.*;
+import java.util.*;
 
 
 public class Main {
-	public static void main(String[] args) throws IOException{
+	public static void main(String[] args) throws InputMismatchException{
 
 		//Chamando menu
 		Menu menu = new Menu();

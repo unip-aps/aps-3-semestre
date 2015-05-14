@@ -1,4 +1,3 @@
-import java.util.Scanner;
 import java.util.*;
 
 public class Menu{
@@ -7,7 +6,7 @@ public class Menu{
 	Consumo opConsumo     = new Consumo();
 	Curiosidade opCuriosidade = new Curiosidade();
 		
-	public void menu() {
+	public void menu() throws InputMismatchException{
 		Scanner ler = new Scanner(System.in);
 		Console console = new Console();
 
@@ -22,37 +21,41 @@ public class Menu{
 		System.out.println("3 - Saiba algumas curiosidades");
 		System.out.println("4 - Sair do Programa");
 
-		opcao = ler.nextInt();
+		boolean continuar = true;
+	
+		do {
+			try{
+				opcao = ler.nextInt();
 		
-		try{
-			switch (opcao){
-				case 1:
-					opIndicacao.menuIndicacao();
-					break;
+				switch (opcao){
+					case 1:
+						opIndicacao.menuIndicacao();
+						continuar = false;
+						break;
+						
+					case 2:
+						opConsumo.MenuConsumo();
+						continuar = false;
+						break;
+						
+					case 3:
+						opCuriosidade.menuCuriosidades();
+						continuar = false;
+						break;
 					
-				case 2:
-					opConsumo.MenuConsumo();
-					break;
-					
-				case 3:
-					opCuriosidade.menuCuriosidades();
-					break;
-				case 4:
-					System.exit(0);
-					
-				default:		
-					System.out.print("Oops ! Opção invalida");
+					case 4:
+						System.exit(0);
+						
+					default:		
+						System.out.println("Você não digitou uma opção válida, tente novamente!");
+						continuar = true;
+				}
 			}
-
+			catch (InputMismatchException e){
+				System.err.println("Você não digitou uma opção válida, tente novamente!");
+				ler.nextLine();
+			}
 		}
-		catch (NumberFormatException e){
-			System.out.println("-----> Please try entering a valid number(s) <-----");
-		}
-		catch (InputMismatchException e){
-			System.out.println("-----> Please try entering a valid number(s) <-----");
-		}
-		catch (Exception e) {
-			System.out.println ("Exceção:");
-		}
+		while(continuar);
 	}
 }
