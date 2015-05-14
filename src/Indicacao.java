@@ -112,8 +112,8 @@ public class Indicacao {
 					case 3:
 						console.ConsoleTitle("Carros esportivos");
 						System.out.println("Esses são os modelos mais indicados para seu perfil:");
-						indicacao(0);
-						System.out.println("Andar de bike pode ser uma ótima opção para seu lazer :)");
+						indicacao(12);
+						System.out.println("Andar de bike pode ser uma ótima opção para seu lazer :)\n");
 						continuar = false;
 						break;
 						
