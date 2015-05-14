@@ -40,6 +40,17 @@ public class Json {
 		listaDeCarros.add(uno);
 		listaDeCarros.add(gol);
 		listaDeCarros.add(palio);
+		listaDeCarros.add(montana);
+		listaDeCarros.add(ranger);
+		listaDeCarros.add(hilux);
+		listaDeCarros.add(fusion);
+		listaDeCarros.add(a3);
+		listaDeCarros.add(accord);
+		listaDeCarros.add(ecosport);
+		listaDeCarros.add(santa_fe);
+		listaDeCarros.add(focus_rs);
+		listaDeCarros.add(turboS);
+		listaDeCarros.add(m);
 	}
 
 	// public void escreverJson() throws IOException {

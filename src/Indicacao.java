@@ -34,17 +34,17 @@ public class Indicacao {
 		String primeiraPergunta, segundaPergunta, terceiraPergunta;
 
 		primeiraPergunta = "Qual será o uso do veículo?\n"
-				+ "1- Família\n"
-				+ "2- Trabalho\n"
-				+ "3- Lazer";
+				+ "1 - Família\n"
+				+ "2 - Trabalho\n"
+				+ "3 - Lazer";
 		
 		segundaPergunta = "Qual o tamanho da sua família?\n"
-				+ "1-) Pequena\n"
-				+ "2-) Grande";
+				+ "1 - Pequena\n"
+				+ "2 - Grande";
 		
 		terceiraPergunta = "Qual o tipo do trabalho?\n"
-				+ "1-) Transporte de cargas\n"
-				+ "2-) Atendimento";
+				+ "1 - Transporte de cargas\n"
+				+ "2 - Atendimento";
 		
 		System.out.println(primeiraPergunta);
 		setPrimeiraResposta(ler.nextInt());
@@ -57,10 +57,13 @@ public class Indicacao {
 				switch(getSegundaResposta()) {
 					case 1:
 						System.out.println("Compacto");
+						indicacao(0);
 						break;
 					
 					case 2:
 						System.out.println("SUV ou Sedan");
+						indicacao(6);
+						indicacao(10);
 						break;
 						
 					default:
@@ -74,10 +77,12 @@ public class Indicacao {
 				switch(getTerceiraResposta()) {
 					case 1:
 						System.out.println("Pickup");
+						indicacao(3);
 						break;
 					
 					case 2:
 						System.out.println("Compacto");
+						indicacao(0);
 						break;
 						
 					default:
@@ -94,19 +99,17 @@ public class Indicacao {
 		}
 	}
 
-	public void indicacao() {
+	public void indicacao(int segmento) {
 		Json obj = new Json();
 		obj.montarListaDeCarros();
-		int tamanhoListaDeCarros = obj.listaDeCarros.size();
 
-		String segmento = "class carro.Compacto";
+		int tamanhoListaDeCarros = obj.listaDeCarros.size();
 
 		ArrayList <String> carrosIndicados = new ArrayList<String>();
 
 		for (int i = 0; i <= tamanhoListaDeCarros - 1; i++) {
-			if(obj.listaDeCarros.get(i).getClass() == obj.listaDeCarros.get(0).getClass()) {
-				System.out.println(i);
-				carrosIndicados.add(obj.listaDeCarros.get(i).modelo);
+			if(obj.listaDeCarros.get(i).getClass() == obj.listaDeCarros.get(segmento).getClass()) {
+				carrosIndicados.add(obj.listaDeCarros.get(i).fabricante + " " + obj.listaDeCarros.get(i).modelo);
 			}
 		}
 
